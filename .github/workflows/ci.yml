@@ -1,0 +1,31 @@
+name: validate-skills
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      # Validate every skills/**/SKILL.md against schemas/skill-meta.schema.json:
+      # - path must be skills/<capabilities|composites|playbooks>/<slug>/SKILL.md
+      # - slug is lowercase-kebab and unique
+      # - required frontmatter present
+      - name: Validate skill structure
+        run: node scripts/validate-skills.js
+
+      # Guard: no secrets or raw data committed
+      - name: No secrets or CSVs tracked
+        run: |
+          if git ls-files | grep -E '(^|/)\.env$|(^|/)\.env\.[^e]|\.pem$|\.key$'; then
+            echo "::error::Secret-looking file tracked"; exit 1
+          fi
+          if git ls-files | grep -E '\.csv$' | grep -vE '(^|/)examples/'; then
+            echo "::error::CSV outside examples/ tracked"; exit 1
+          fi

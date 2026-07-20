@@ -1,0 +1,34 @@
+# Environment & secrets
+.env
+.env.*
+!.env.example
+*.env
+credentials.json
+*_credentials.*
+*.pem
+*.key
+.secrets/
+
+# Never commit CRM data, contact lists, or raw exports
+outputs/lists/
+outputs/raw/
+*.csv
+!**/examples/**/*.csv
+
+# Dependencies & build
+node_modules/
+.next/
+dist/
+__pycache__/
+*.pyc
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Local agent scratch
+scratch/
+excalidraw.log

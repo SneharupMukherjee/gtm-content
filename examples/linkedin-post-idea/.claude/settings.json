@@ -1,0 +1,22 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "input=$(cat); path=$(echo \"$input\" | python3 -c \"import sys,json; print(json.load(sys.stdin).get('file_path',''))\"); if echo \"$path\" | grep -qE 'CLAUDE\\.md$'; then echo '{\"decision\":\"block\",\"reason\":\"CLAUDE.md is human-owned and system-protected. Propose changes via a message to the user instead.\"}'; exit 2; fi"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "WebSearch(*)",
+      "WebFetch(*)",
+      "Read(*)"
+    ]
+  }
+}
