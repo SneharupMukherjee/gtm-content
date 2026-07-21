@@ -70,7 +70,7 @@ Overwrite `scratch/ideas.md` with the following structure:
 **Permalink:** [url]
 **Theme category:** [Pricing / Identity / Workflow]
 **Core pain:** [1 sentence — what emotional truth this post tapped]
-**ICP relevance:** [how this maps to the Pineway coaching audience specifically]
+**ICP relevance:** [how this maps to the Acme coaching audience specifically]
 **Visual:** [description if image analyzed, or "none"]
 **Hook opportunity:** [1 sentence on the angle — what makes this a good LinkedIn hook source]
 

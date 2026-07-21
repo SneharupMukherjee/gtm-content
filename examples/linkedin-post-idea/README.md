@@ -1,7 +1,7 @@
 # LinkedIn Post Idea Agent
 
 Mines what's actually trending in coaching communities on Reddit and turns it into LinkedIn
-hook ideas written in Debbie's voice. Every idea traces back to a real post with real
+hook ideas written in Jane Doe's voice. Every idea traces back to a real post with real
 engagement — no invented thought leadership.
 
 ---
@@ -41,12 +41,12 @@ Reads `scratch/ideas.md` (3 real Reddit posts with context). Writes 3 hooks per 
 - **Identity** — speaks to the role conflict ("you became a coach to X, not to Y")
 - **Insight/Observation** — pattern noticed across coaches, ends with a colon to pull them in
 
-All hooks are written in Debbie's voice per `context/linkedin-voice.md`. Drafts saved to
+All hooks are written in Jane Doe's voice per `context/linkedin-voice.md`. Drafts saved to
 `scratch/hooks-draft.md`.
 
 ### Step 3 — Critic subagent
 Reads `scratch/hooks-draft.md` in isolation (no Reddit data in context). Scores all 9 hooks
-on 6 dimensions, runs hard-block checks (banned words, em dashes, "Pineway", engagement bait),
+on 6 dimensions, runs hard-block checks (banned words, em dashes, "Acme", engagement bait),
 and returns **PUBLISH / REVISE / HOLD**. If REVISE, main agent fixes flagged hooks and
 re-submits once. If HOLD, the run stops and you're shown the critique.
 
@@ -186,7 +186,7 @@ Output is JSON. Posts are pre-scored and pre-filtered against `output/used-posts
 
 Full rules in `context/linkedin-voice.md`. Key constraints:
 
-- No product name ("Pineway") in any hook — hooks are content, not ads
+- No product name ("Acme") in any hook — hooks are content, not ads
 - No banned words: leverage, optimize, streamline, ecosystem, synergy, game-changer, unpack, authentic, journey... (full list in voice file)
 - No em dashes, no semicolons
 - Max 1 exclamation point across the entire output file
@@ -205,7 +205,7 @@ linkedin-post-idea/
 ├── scripts/
 │   └── fetch_reddit.py              # Reddit JSON API fetcher + scorer + deduplicator
 ├── context/
-│   └── linkedin-voice.md            # Debbie's voice rules, ICP pain language, banned words
+│   └── linkedin-voice.md            # Jane Doe's voice rules, ICP pain language, banned words
 ├── .claude/
 │   ├── settings.json                # CLAUDE.md write-protection + tool permissions
 │   └── agents/

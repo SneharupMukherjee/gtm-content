@@ -1,8 +1,8 @@
-# Voice: LinkedIn Content — Debbie, Pineway
+# Voice: LinkedIn Content — Jane Doe, Acme
 
 ## Purpose
 
-This voice file governs LinkedIn hook writing. It adapts Debbie's email voice for public
+This voice file governs LinkedIn hook writing. It adapts Jane Doe's email voice for public
 content. The audience is the same — coaches drowning in admin — but the context is different:
 they're scrolling a feed, not reading a message addressed to them.
 
@@ -61,7 +61,7 @@ solutions, empower, actionable, impactful, transformative, seamless, frictionles
 - Always use contractions: don't, you're, it's, here's, I've, they're, we're
 - Max 1 exclamation point per output file (not per hook — per the entire generated file)
 - No engagement bait: never "Comment YES", "Tag a coach", "Drop a [emoji] if...", "Repost if..."
-- No product name ("Pineway") in hooks — hooks are content, not ads
+- No product name ("Acme") in hooks — hooks are content, not ads
 - Specific over vague: "7 hours a week" beats "hours", "Calendly + Stripe + Zoom" beats "multiple tools"
 - Short sentences. The first 5 words carry the most weight.
 
@@ -125,7 +125,7 @@ deliver the whole insight in one sentence.
 
 Before finalizing any hook set:
 1. Read all 9 hooks aloud. Does any one sound like an ad? Revise it.
-2. Check for "Pineway" — must not appear anywhere. Remove if found.
+2. Check for "Acme" — must not appear anywhere. Remove if found.
 3. Check for em dashes and semicolons — remove any found.
 4. Count exclamation points across all 9 hooks — reduce to max 1 total.
 5. Pick the weakest hook. Ask: would a coach recognize themselves in this? If not, rewrite.

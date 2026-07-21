@@ -25,7 +25,7 @@ SUBREDDITS = [
 ]
 
 USED_POSTS_LOG = "output/used-posts.log"
-USER_AGENT = "linkedin-idea-agent/1.0 by pineway"
+USER_AGENT = "linkedin-idea-agent/1.0 by acme"
 
 
 def load_used_posts():

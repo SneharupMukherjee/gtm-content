@@ -18,7 +18,7 @@ import urllib.error
 import argparse
 
 
-USER_AGENT = "linkedin-idea-agent/1.0 by pineway"
+USER_AGENT = "linkedin-idea-agent/1.0 by acme"
 
 
 def fetch_comments(permalink, limit=15):
